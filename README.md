@@ -1,3 +1,16 @@
+# Instructions for running application locally:
+To build the Docker image, navigate to the receipt-processor-challenge folder and run the following command:
+
+```docker build -t receipt-processor .```
+
+To run the container, use the following command:
+
+```docker run -p 8080:8080 receipt-processor```
+
+This will start the Java application, which can be tested via ```localhost:8080/receipts/process``` and ```localhost:8080/receipts/{id}/points``` using Postman, Insomnia, or any API testing platform!
+
+# ______________________________
+
 # Receipt Processor
 
 Build a webservice that fulfils the documented API. The API is described below. A formal definition is provided 
@@ -6,7 +19,7 @@ in the [api.yml](./api.yml) file. We will use the described API to test your sol
 Provide any instructions required to run your application.
 
 Data does not need to persist when your application stops. It is sufficient to store information in memory. There are too many different database solutions, we will not be installing a database on our system when testing your application.
-
+    
 ## Language Selection
 
 You can assume our engineers have Go and Docker installed to run your application. Go is our preferred language, but it is not a requirement for this exercise. If you are not using Go, include a Dockerized setup to run the code. You should also provide detailed instructions if your Docker file requires any additional configuration to run the application.
